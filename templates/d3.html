@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>IBM Assessment</title>
+</head>
+<body style="background:#EFEFEF">
+<div>
+    <input id="renderButton" type="button" class="button" onclick="get_map()" value="Request"/>
+    <input id="tempButton" type="button" class="button" onclick="drawLineGraph(true)" value="Temperature"/>
+    <input id="humidButton" type="button" class="button" onclick="drawLineGraph(false)" value="Humidity"/>
+    <label class="center">Sensor data(Temperature & Humidity)</label>
+</div>
+<div id="chart" class="center"
+     style="text-align: center; box-shadow: 10px 10px 5px #888888; background-color: #FFF; margin: 10px 10px 10px 10px"></div>
+<script src="{{ url_for('static', filename='d3.min.js')}}"></script>
+<script src="{{ url_for('static', filename='jquery.min.js')}}"></script>
+<script src="{{ url_for('static', filename='bar.js')}}"></script>
+<style src="{{ url_for('static', filename='style.css')}}"></style>
+</body>
+</html>
